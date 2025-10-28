@@ -48,16 +48,21 @@ body {
 }
 
 /* ===== HERO SECTION ===== */
+/* ===== HERO SECTION ===== */
 .div-semi-top {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centraliza horizontalmente */
   align-items: center;
-  padding: 60px 80px;
+  padding: 60px 40px; /* Reduziu o padding lateral de 80px para 40px */
   flex-wrap: wrap;
+  gap: 40px; /* Garante espaçamento entre texto e imagem */
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o conteúdo dentro do body */
 }
 
 .div-semi-top-0 {
-  max-width: 450px;
+  max-width: 500px;
+  text-align: center; /* Centraliza o texto também */
 }
 
 .texto-semi {
@@ -65,6 +70,16 @@ body {
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 8px;
+}
+
+/* Imagem */
+.img-semi-top {
+  width: 480px;
+  height: auto;
+  /* Removido o margin-left fixo */
+  border-radius: 12px;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
 }
 
 .div-botoes-semi {
@@ -110,15 +125,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Imagem */
-.img-semi-top {
-  width: 480px;
-  height: auto;
-  margin-left: 40px;
-  border-radius: 12px;
-  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.3));
-  transition: transform 0.3s ease;
-}
+
 
 .img-semi-top:hover {
   transform: scale(1.02);
