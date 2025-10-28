@@ -1,0 +1,252 @@
+/* Importação da fonte Outfit já está no HTML */
+
+/* Reset básico e cor de fundo com gradiente */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Cor de fundo base do usuário: #180D59 */
+    /* Adicionando um gradiente sutil para replicar o efeito da imagem */
+    background: linear-gradient(180deg, #180D59 0%, #30177A 100%);
+    min-height: 100vh; /* Garante que o gradiente cubra toda a tela */
+    font-family: "Outfit", sans-serif;
+}
+
+/* Estilo do Cabeçalho (Header) */
+.top {
+    display: flex;
+    /* Usando space-between para empurrar os links para a direita e a logo para a esquerda */
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 70px; /* Padding para as laterais e topo/fundo */
+}
+
+/* Logo - A SVG já tem a cor roxa (fill="#A100FF") */
+.img-top {
+    /* Ajuste o tamanho da SVG se necessário, mas as dimensões originais (123x89) parecem adequadas */
+    display: flex;
+    align-items: center;
+}
+
+/* Links de Navegação */
+.div-top {
+    display: flex;
+    gap: 30px;
+    /* O padding-right: 70px; foi movido para o .top para centralizar o conteúdo do header */
+}
+
+.texto-top {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none; /* Remover sublinhado de links */
+    cursor: pointer;
+    /* O design não parece ter a fonte Outfit, mas vou manter o que o usuário definiu */
+    transition: color 0.3s;
+}
+
+.texto-top:hover {
+    color: #A100FF; /* Um efeito de hover sutil */
+}
+
+/* Seção Principal (Hero Section) */
+.div-semi-top {
+    margin-top: 80px; /* Ajuste para o espaçamento do topo */
+    display: flex;
+    /* Usando um padding horizontal para centralizar o conteúdo de forma mais controlada */
+    padding: 0 100px;
+    align-items: center;
+    justify-content: space-around; /* Distribui o espaço entre o texto e a imagem */
+}
+
+/* Div do Texto e Botões */
+.div-semi-top-0 {
+    /* O design mostra o texto e botões à esquerda */
+    max-width: 500px;
+}
+
+.texto-semi {
+    color: #FFF;
+    font-size: 80px; /* Aumentado para corresponder ao tamanho da imagem */
+    font-weight: 700;
+    line-height: 1.0; /* Linha mais apertada para o texto */
+    text-transform: none; /* Removido capitalize, o texto na imagem é misto */
+    padding: 0;
+    margin: 0;
+}
+
+/* Div dos Botões */
+.div-botoes-semi {
+    margin-top: 40px; /* Aumentado o espaçamento para a imagem */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Botão CONECTAR (Preenchido) */
+.btn-conectar {
+    background-color: #A100FF; /* Roxo vibrante */
+    color: #FFF;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px; /* Borda arredondada */
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-conectar:hover {
+    background-color: #8B00E0;
+}
+
+/* Botão LOGIN (Borda) */
+.btn-login {
+    background-color: transparent;
+    color: #FFF;
+    border: 2px solid #A100FF; /* Borda roxa vibrante */
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: rgba(161, 0, 255, 0.1); /* Um leve fundo ao passar o mouse */
+}
+
+/* Imagem de Ilustração */
+.div-semi-top-1 {
+    /* Garante que a imagem não seja esmagada */
+    flex-shrink: 0;
+}
+
+.img-semi-top {
+    /* Ajustado o tamanho para corresponder melhor à proporção da imagem */
+    width: 650px; 
+    height: auto;
+    margin-left: 50px; /* Espaçamento da imagem para o texto */
+}
+
+/* Removido as classes não utilizadas ou substituídas */
+/* .espaco foi removida */
+/* .div-top teve o padding ajustado */
+/* .texto-semi teve o font-size ajustado */
+/* .img-semi-top teve o width ajustado */
+
+.main-2 {
+    max-width: 1400px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 40px 20px;
+}
+
+
+.feature-section {
+    padding: 80px 0;
+    justify-content: center;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Estilo para as ilustrações */
+.illustration-container {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.illustration-container img {
+    width: 70%;
+    height: auto;
+    max-width: 600px; /* Ajuste o tamanho máximo da ilustração */
+}
+
+/* Estilo para o texto */
+.text-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+.text-container h1 {
+    font-size: 3.5rem; /* Título grande e em negrito */
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-secondary); /* Texto secundário um pouco mais claro */
+}
+
+/* Ajustes específicos para as seções */
+
+/* Seção 1: Comunidade (Ilustração Esquerda) */
+.community-section .content-wrapper {
+    flex-direction: row; /* Ilustração esquerda, Texto direita */
+}
+
+/* Seção 2: Especialistas (Ilustração Direita) */
+.specialists-section .content-wrapper {
+    flex-direction: row-reverse; /* Texto esquerda, Ilustração direita */
+}
+
+h1, p{
+    color: #FFF;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 992px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .illustration-container,
+    .text-container {
+        max-width: 100%;
+    }
+
+    .text-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .text-container p {
+        font-size: 1rem;
+    }
+
+    .community-section .content-wrapper {
+        flex-direction: column;
+    }
+
+    .specialists-section .content-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .feature-section {
+        padding: 40px 0;
+    }
+
+    .text-container h1 {
+        font-size: 2rem;
+    }
+}
+
