@@ -3,39 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel do Administrador</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../css/login.css" class="css">
+    <title>Painel do Funcionário - Layout Diagonal</title>
 </head>
 <body>
 
     <div class="container">
-        <div class="img-container">
-            <img src="imgs/img.png" alt="Ilustração">
+        <!-- LADO ESQUERDO -->
+        <div class="left-side">
+            <div class="image-block">
+
+                <!-- Card Lua -->
+                <a href="#" class="card-link link-lua-style" title="Perfil de Lua">
+                    <img src="../../../assets/images/Match 02.svg" alt="Imagem de Lua">
+                </a>
+
+                <!-- Card Paulo -->
+                <a href="#" class="card-link link-paulo-style" title="Perfil de Paulo">
+                    <img src="../../../assets/images/Match 01.svg" alt="Imagem de Paulo">
+                </a>
+
+                <!-- Ícone Central -->
+                <div class="middle-icon">
+                    <a href="#" title="Conexão">
+                        <img src="../../../assets/images/connection.svg" width="100" height="100" alt="Ícone de conexão">
+                    </a>
+                </div>
+
+            </div>
         </div>
 
+        <!-- LADO DIREITO -->
         <div class="back">
             <div class="login-wrapper">
                 <div class="login-box">
-                    <h2>Painel do Administrador</h2>
+                    <h2>Painel de Login</h2>
                     <p>Insira os dados abaixo e acesse o sistema</p>
 
                     <form>
-                        <label for="cpf">CPF/CRMV</label>
-                        <input type="text" id="cpf" placeholder="000.000.000-00 ou NIS">
-
-                        <label for="senha">Senha</label>
-                        <input type="password" id="senha" placeholder="Digite sua senha">
+                        <label for="email">Email Corporativo</label>
+                        <input type="email" id="email" placeholder="joao@empresa.com">
 
                         <button type="submit" class="btn-entrar">Entrar</button>
                     </form>
 
                     <hr>
-
-                    <button class="btn-primeiro-acesso">Primeiro Acesso?</button>
                 </div>
 
-                <!-- Agora o link fica fora da caixa, mas centralizado -->
-                <a href="#" class="voltar">Voltar para a página inicial</a>
+                <a href="../../../../index.html" class="voltar">Voltar para a página inicial</a>
+                
             </div>
         </div>
     </div>

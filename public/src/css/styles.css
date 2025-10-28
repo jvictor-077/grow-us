@@ -1,252 +1,251 @@
-/* Importação da fonte Outfit já está no HTML */
-
-/* Reset básico e cor de fundo com gradiente */
+/* Reset e base */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    /* Cor de fundo base do usuário: #180D59 */
-    /* Adicionando um gradiente sutil para replicar o efeito da imagem */
-    background: linear-gradient(180deg, #180D59 0%, #30177A 100%);
-    min-height: 100vh; /* Garante que o gradiente cubra toda a tela */
-    font-family: "Outfit", sans-serif;
+  background: linear-gradient(180deg, #180D59 0%, #30177A 100%);
+  font-family: "Outfit", sans-serif;
+  color: #fff;
+  min-height: 100vh;
 }
 
-/* Estilo do Cabeçalho (Header) */
+/* ===== HEADER ===== */
 .top {
-    display: flex;
-    /* Usando space-between para empurrar os links para a direita e a logo para a esquerda */
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 70px; /* Padding para as laterais e topo/fundo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
 }
 
-/* Logo - A SVG já tem a cor roxa (fill="#A100FF") */
-.img-top {
-    /* Ajuste o tamanho da SVG se necessário, mas as dimensões originais (123x89) parecem adequadas */
-    display: flex;
-    align-items: center;
+.img-top svg {
+  width: 90px;
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-/* Links de Navegação */
+.img-top svg:hover {
+  transform: scale(1.05);
+}
+
 .div-top {
-    display: flex;
-    gap: 30px;
-    /* O padding-right: 70px; foi movido para o .top para centralizar o conteúdo do header */
+  display: flex;
+  gap: 24px;
 }
 
 .texto-top {
-    color: #FFF;
-    font-size: 20px;
-    font-weight: 700;
-    text-decoration: none; /* Remover sublinhado de links */
-    cursor: pointer;
-    /* O design não parece ter a fonte Outfit, mas vou manter o que o usuário definiu */
-    transition: color 0.3s;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .texto-top:hover {
-    color: #A100FF; /* Um efeito de hover sutil */
+  color: #a100ff;
 }
 
-/* Seção Principal (Hero Section) */
+/* ===== HERO SECTION ===== */
 .div-semi-top {
-    margin-top: 80px; /* Ajuste para o espaçamento do topo */
-    display: flex;
-    /* Usando um padding horizontal para centralizar o conteúdo de forma mais controlada */
-    padding: 0 100px;
-    align-items: center;
-    justify-content: space-around; /* Distribui o espaço entre o texto e a imagem */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 80px;
+  flex-wrap: wrap;
 }
 
-/* Div do Texto e Botões */
 .div-semi-top-0 {
-    /* O design mostra o texto e botões à esquerda */
-    max-width: 500px;
+  max-width: 450px;
 }
 
 .texto-semi {
-    color: #FFF;
-    font-size: 80px; /* Aumentado para corresponder ao tamanho da imagem */
-    font-weight: 700;
-    line-height: 1.0; /* Linha mais apertada para o texto */
-    text-transform: none; /* Removido capitalize, o texto na imagem é misto */
-    padding: 0;
-    margin: 0;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 8px;
 }
 
-/* Div dos Botões */
 .div-botoes-semi {
-    margin-top: 40px; /* Aumentado o espaçamento para a imagem */
-    display: flex;
-    gap: 20px;
-    align-items: center;
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
 }
 
-/* Botão CONECTAR (Preenchido) */
+/* Botão principal */
 .btn-conectar {
-    background-color: #A100FF; /* Roxo vibrante */
-    color: #FFF;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 30px; /* Borda arredondada */
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background: #a100ff;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(161, 0, 255, 0.3);
+  transition: all 0.3s ease;
 }
 
 .btn-conectar:hover {
-    background-color: #8B00E0;
+  background: #8b00e0;
+  transform: translateY(-2px);
 }
 
-/* Botão LOGIN (Borda) */
+/* Botão secundário */
 .btn-login {
-    background-color: transparent;
-    color: #FFF;
-    border: 2px solid #A100FF; /* Borda roxa vibrante */
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
+  background: transparent;
+  color: #fff;
+  border: 1.8px solid #a100ff;
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn-login:hover {
-    background-color: rgba(161, 0, 255, 0.1); /* Um leve fundo ao passar o mouse */
+  background: rgba(161, 0, 255, 0.1);
+  transform: translateY(-2px);
 }
 
-/* Imagem de Ilustração */
-.div-semi-top-1 {
-    /* Garante que a imagem não seja esmagada */
-    flex-shrink: 0;
-}
-
+/* Imagem */
 .img-semi-top {
-    /* Ajustado o tamanho para corresponder melhor à proporção da imagem */
-    width: 650px; 
-    height: auto;
-    margin-left: 50px; /* Espaçamento da imagem para o texto */
+  width: 480px;
+  height: auto;
+  margin-left: 40px;
+  border-radius: 12px;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
 }
 
-/* Removido as classes não utilizadas ou substituídas */
-/* .espaco foi removida */
-/* .div-top teve o padding ajustado */
-/* .texto-semi teve o font-size ajustado */
-/* .img-semi-top teve o width ajustado */
+.img-semi-top:hover {
+  transform: scale(1.02);
+}
 
+/* ===== SEÇÕES INFERIORES ===== */
 .main-2 {
-    max-width: 1400px;
-    margin: 0 auto; /* Centraliza horizontalmente */
-    padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
 }
-
 
 .feature-section {
-    padding: 80px 0;
-    justify-content: center;
+  padding: 60px 0;
 }
 
 .content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    margin: 0 auto;
-    max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-/* Estilo para as ilustrações */
 .illustration-container {
-    flex: 1;
-    max-width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .illustration-container img {
-    width: 70%;
-    height: auto;
-    max-width: 600px; /* Ajuste o tamanho máximo da ilustração */
+  width: 65%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.25));
+  transition: transform 0.3s ease;
 }
 
-/* Estilo para o texto */
+.illustration-container img:hover {
+  transform: scale(1.02);
+}
+
 .text-container {
-    flex: 1;
-    max-width: 50%;
+  flex: 1;
+  max-width: 500px;
 }
 
 .text-container h1 {
-    font-size: 3.5rem; /* Título grande e em negrito */
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
 .text-container p {
-    font-size: 1.2rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: var(--color-text-secondary); /* Texto secundário um pouco mais claro */
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.9;
 }
 
-/* Ajustes específicos para as seções */
-
-/* Seção 1: Comunidade (Ilustração Esquerda) */
+/* Ordem alternada */
 .community-section .content-wrapper {
-    flex-direction: row; /* Ilustração esquerda, Texto direita */
+  flex-direction: row;
 }
 
-/* Seção 2: Especialistas (Ilustração Direita) */
 .specialists-section .content-wrapper {
-    flex-direction: row-reverse; /* Texto esquerda, Ilustração direita */
+  flex-direction: row-reverse;
 }
 
-h1, p{
-    color: #FFF;
-}
-
-/* Ajustes de responsividade */
+/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 992px) {
-    .content-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
+  .div-semi-top {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .illustration-container,
-    .text-container {
-        max-width: 100%;
-    }
+  .img-semi-top {
+    margin: 40px 0 0 0;
+    width: 400px;
+  }
 
-    .text-container h1 {
-        font-size: 2.5rem;
-    }
+  .texto-semi {
+    font-size: 46px;
+  }
 
-    .text-container p {
-        font-size: 1rem;
-    }
+  .content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .community-section .content-wrapper {
-        flex-direction: column;
-    }
+  .illustration-container img {
+    width: 80%;
+  }
 
-    .specialists-section .content-wrapper {
-        flex-direction: column;
-    }
+  .text-container h1 {
+    font-size: 2rem;
+  }
+
+  .text-container p {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 576px) {
-    .feature-section {
-        padding: 40px 0;
-    }
+  .top {
+    padding: 15px 30px;
+  }
 
-    .text-container h1 {
-        font-size: 2rem;
-    }
+  .div-top {
+    gap: 16px;
+  }
+
+  .texto-top {
+    font-size: 14px;
+  }
+
+  .texto-semi {
+    font-size: 38px;
+  }
+
+  .btn-conectar,
+  .btn-login {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .img-semi-top {
+    width: 100%;
+  }
 }
-
