@@ -167,6 +167,7 @@ input:focus {
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.3s, transform 0.1s;
+    text-decoration: none;
 }
 
 .btn-entrar:hover {
